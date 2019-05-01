@@ -45,11 +45,12 @@ namespace TestIdentity
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
+                // app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>
